@@ -1,0 +1,29 @@
+# Node / Frontend
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.DS_Store
+
+# Build artifacts
+build/
+*.egg-info/
+dist/
+
+# Testing
+.pytest_cache/
+coverage/

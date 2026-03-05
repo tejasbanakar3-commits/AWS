@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vidya-Setu Elite Modules Grid</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06e8f9",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2123",
+                        "secondary": "#21474a",
+                        "surface-dark": "#183335",
+                        "accent-green": "#00ffaa",
+                        "accent-magenta": "#ff00ff"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .glass-card {
+            background: rgba(24, 51, 53, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(6, 232, 249, 0.1);
+        }
+        .glass-card-completed {
+            border: 1px solid rgba(0, 255, 170, 0.3);
+            box-shadow: 0 0 15px rgba(0, 255, 170, 0.05);
+        }
+        .glass-card-active {
+            border: 1px solid rgba(6, 232, 249, 0.5);
+            box-shadow: 0 0 20px rgba(6, 232, 249, 0.1);
+        }
+        .glass-card-locked {
+            opacity: 0.6;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<div class="flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-secondary/50 px-10 py-4 glass-card sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+<h2 class="text-xl font-bold leading-tight tracking-wider uppercase">Vidya-Setu</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal tracking-wide" href="#">DASHBOARD</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal tracking-wide" href="#">COMMAND CENTER</a>
+<a class="text-primary text-sm font-bold leading-normal tracking-wide border-b-2 border-primary pb-1" href="#">MODULES</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-secondary/50 bg-background-dark/50">
+<div class="text-slate-400 flex items-center justify-center pl-4 pr-2">
+<span class="material-symbols-outlined text-lg">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-200 focus:outline-none focus:ring-0 border-none bg-transparent h-full placeholder:text-slate-500 px-2 text-sm font-medium" placeholder="Search systems..." type="text"/>
+</div>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-primary/30" data-alt="User Avatar Placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHTxvCXijFURBm4CvyK8LXmBiGcGgVxjnZi8I2dwpUanomvSExmjvY2wKw2p9Nx0en_fHKLobVTQ7LtwXHmaWIXHeAo_nGektNjKJ1qaW2kg1ydnO4V9y4a_lWLhRDp-Cv6d6PE1WJk77CuuogeJmXqzEt86AZTalqfGSD7QHPGWHfm0UjeTy4ysJMxQgbF90bhe9y1Gt8OKvrakiX-AfWJ_m9XgdVr5S41lz65QEAOxOkbB63hIjj8x4Xr_BBzgAUOl7GvBTUQP4");'></div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto px-6 lg:px-10 py-10">
+<!-- Page Title Area -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight uppercase text-slate-100">Course Modules</h1>
+<div class="flex items-center gap-3">
+<p class="text-slate-400 text-lg font-medium">Subject: Neural Networks</p>
+<span class="text-slate-600">•</span>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+<div class="size-2 rounded-full bg-primary animate-pulse-slow"></div>
+<span class="text-primary text-xs font-bold tracking-widest uppercase">System Active</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-right">
+<p class="text-xs text-slate-500 uppercase tracking-widest mb-1">Overall Progress</p>
+<div class="text-2xl font-bold text-primary">33%</div>
+</div>
+</div>
+</div>
+<!-- Modules Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Completed Module -->
+<div class="glass-card glass-card-completed rounded-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1 duration-300 relative group">
+<div class="absolute top-4 right-4 z-10 bg-surface-dark/80 backdrop-blur rounded-full p-1 border border-accent-green/30 text-accent-green">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover relative" data-alt="Neural network nodes diagram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhvTAw7BdFS4Uz7FizhSNdBVJeha9CfEZOsfS_kULHGKcE2RjPbmUtZxSmM_iniOJAbjpMFvRNHWs7qUDskn_jHRKckhgLAGpQ117vRZYlh7mEergR4HZSgGqOdmv1ipJv7KSueu341c3MPq6KDU7Ssa1AKFmArBv_-k81cFwpWPWrv0PIQ_8o6jqJfxb1NkMNlfRBzXAMle0KGlJs5gJfbXPZIldbFyyTZ10uTu55AwfhP5_MSVZAppyGX4f1B0bowBOpEd6AF6s");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<h3 class="text-xl font-bold text-slate-100 tracking-tight">Module 1: Perceptrons</h3>
+<p class="text-sm text-slate-400 mt-2 line-clamp-2">Understanding the foundational building blocks of artificial neural networks. Single-layer architectures and basic learning rules.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-secondary/30">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-medium text-accent-green uppercase tracking-wider">Status: Completed</span>
+<span class="text-xs text-slate-500">Score: 98%</span>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-surface-dark hover:bg-secondary border border-accent-green/30 text-accent-green text-sm font-bold tracking-wide transition-colors">
+<span class="material-symbols-outlined text-sm mr-2">history</span>
+                                    Review Sector
+                                </button>
+</div>
+</div>
+</div>
+<!-- Active Module -->
+<div class="glass-card glass-card-active rounded-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1 duration-300 relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-magenta to-primary"></div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover relative" data-alt="Backpropagation algorithm visualization" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIHNUClMkOQ_S0jdUlEYXrJqBrWUDdn6ZFHJMTZi3fuWUnjyneKkBJ6DsBtwumoayPdpN7nZeSvyp-xS5ACYqYp56KfLrfyOleo7VtIFlBedEPNDRHaThsvGa35HNL4Vr6X_mvgqRIrGGS78jq0vDv05UepPtSbE_RIC8OS54YNj9EBHz-OJEgH59mdVF1WxLABTk21lVGbKzDkaOQnCZyBP87HYu68Wj6qHmwZHpKyyC47thnuunXHt3XbXpD1xFEfyiKqBz0ueM");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-12 rounded-full bg-primary/20 backdrop-blur-md flex items-center justify-center border border-primary/50 text-primary animate-pulse-slow">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<h3 class="text-xl font-bold text-slate-100 tracking-tight">Module 2: Backpropagation</h3>
+<p class="text-sm text-slate-400 mt-2 line-clamp-2">Mastering the calculus of learning. Deep dive into gradient descent, chain rule applications, and weight optimization.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-secondary/30">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-medium text-primary uppercase tracking-wider animate-pulse-slow">In Progress</span>
+<span class="text-xs text-primary font-bold">60%</span>
+</div>
+<!-- High-detail progress bar -->
+<div class="w-full h-1.5 bg-background-dark rounded-full overflow-hidden mb-4 border border-secondary/50">
+<div class="h-full bg-gradient-to-r from-accent-magenta to-primary w-[60%] relative shadow-[0_0_10px_rgba(6,232,249,0.5)]"></div>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-gradient-to-r from-accent-magenta/80 to-primary/80 hover:from-accent-magenta hover:to-primary text-slate-900 text-sm font-bold tracking-wide transition-all shadow-[0_0_15px_rgba(6,232,249,0.3)]">
+<span class="material-symbols-outlined text-sm mr-2">model_training</span>
+                                    Continue Training
+                                </button>
+</div>
+</div>
+</div>
+<!-- Locked Module -->
+<div class="glass-card glass-card-locked rounded-xl overflow-hidden flex flex-col relative">
+<div class="absolute inset-0 z-20 bg-background-dark/20 backdrop-blur-[2px] flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-slate-500 mb-2">lock</span>
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest bg-background-dark/80 px-3 py-1 rounded border border-slate-700">Restricted Access</span>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover relative grayscale opacity-50" data-alt="Convolutional neural network diagram abstract" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDP2Pc1LpiffXSJT9S7r-CQ8vUXtmXRWePDjFTNVz7bRId2RDo6wciryN6vkchECkZLtldOPmpYG83sTteLiREfT9c6ZdlcAiP5ffP7H9VFKx8jyQ--JLb4hOLt4SYbdChiWlmuwGCN2ICdfk7uxXyQFn7h85cbliVsSiBNFipaLtBRCQoFnq2YUOpX4qPgzt7z-JVZJeSGuKw-mDNyigjtmL0Iat0uETv-OpnlFqbFizwBsBfgwZBfTglr637mRRO2MdHnxSTr7s");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4 opacity-70">
+<div>
+<h3 class="text-xl font-bold text-slate-400 tracking-tight">Module 3: CNNs</h3>
+<p class="text-sm text-slate-500 mt-2 line-clamp-2">Advanced computer vision architectures. Convolutional layers, pooling mechanisms, and feature extraction techniques.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-secondary/30">
+<div class="flex items-center justify-center p-3 rounded bg-background-dark/50 border border-slate-800">
+<span class="text-xs text-slate-500 text-center font-medium">Complete prior modules to unlock</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

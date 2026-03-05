@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidya-Setu AI Command Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Grid -->
+    <div class="background-grid"></div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="topbar">
+        <div class="topbar-left">
+            <div class="logo-box">
+                <!-- Academic Cap Icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                </svg>
+            </div>
+            <div class="logo-text">
+                <h1 class="logo-title">VIDYA-SETU</h1>
+                <span class="logo-subtitle">AI COMMAND CENTER</span>
+            </div>
+        </div>
+
+        <div class="topbar-middle">
+            <div class="status-indicator"></div>
+            <span class="operator-label">OPERATOR:</span>
+            <span class="operator-name">bfgb</span>
+            <span class="operator-separator">/</span>
+            <span class="operator-role">College Degree</span>
+        </div>
+
+        <div class="topbar-right">
+            <div class="lang-toggle">
+                <button class="lang-btn active">ENGLISH</button>
+                <button class="lang-btn inactive">ಕನ್ನಡ</button>
+            </div>
+            <button class="edit-profile-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20h9"></path>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+                EDIT PROFILE
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Left Panel: Context -->
+        <section class="left-panel">
+            <div class="cyan-accent-top"></div>
+            <div class="cyan-accent-left"></div>
+
+            <div class="icon-box-wrapper">
+                <div class="icon-box">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <h2 class="hero-title">Design your<br>learning module</h2>
+            <p class="hero-desc">Interface ready. Initialize neural mapping by defining the core subject parameters and
+                reference data sets.</p>
+
+            <div class="system-status">
+                <div class="status-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="status-icon" stroke="#00ffff"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <span>SYSTEM: STABLE</span>
+                </div>
+                <div class="status-item magenta-status">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="status-icon" stroke="#ff00ff"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                        <rect x="9" y="9" width="6" height="6"></rect>
+                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                    </svg>
+                    <span>LATENCY: 24MS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Form Inputs -->
+        <section class="right-panel">
+            <div class="form-group">
+                <label class="glow-label">CORE SUBJECT OR TOPIC</label>
+                <div class="input-wrapper">
+                    <input type="text" class="tech-input" placeholder="e.g. Advanced Machine Learning, Quantum Physics">
+                </div>
+            </div>
+
+            <div class="form-group flex-1">
+                <div class="label-row">
+                    <label class="glow-label">REFERENCE CONTEXT / SYLLABUS DATA</label>
+                    <span class="optional-tag">OPTIONAL</span>
+                </div>
+                <div class="input-wrapper flex-1">
+                    <textarea class="tech-input textarea"
+                        placeholder="Paste lecture notes, syllabus bullet points, or reference text for the AI context window..."></textarea>
+                </div>
+            </div>
+
+            <button class="generate-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3l1.9 5.8 1.9-5.8a2 2 0 0 1 1.3-1.3l5.8-1.9-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" />
+                </svg>
+                GENERATE CURRICULUM
+            </button>
+        </section>
+    </main>
+
+    <!-- Floating Chat Button -->
+    <button class="floating-chat" aria-label="Open Chat">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#000" stroke="#000" stroke-width="1"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

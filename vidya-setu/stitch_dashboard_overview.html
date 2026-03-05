@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vidya-Setu Elite Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#06e8f9",
+          "background-light": "#f5f8f8",
+          "background-dark": "#070e0f",
+        },
+        fontFamily: {
+          "display": ["Space Grotesk", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+<style>
+  .glass-panel {
+    background: rgba(15, 33, 35, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(6, 232, 249, 0.15);
+  }
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(6, 232, 249, 0.2);
+  }
+  .neon-border:focus-within {
+    border-color: #06e8f9;
+    box-shadow: inset 0 0 10px rgba(6, 232, 249, 0.3), 0 0 10px rgba(6, 232, 249, 0.3);
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #06e8f9, #b400ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .mesh-bg {
+    background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-x-hidden min-h-screen">
+<div class="relative flex h-full flex-col group/design-root w-full">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-10 py-4 glass-panel rounded-xl mb-6">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] gradient-text">Vidya-Setu Elite</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-primary text-sm font-medium leading-normal drop-shadow-[0_0_8px_rgba(6,232,249,0.5)]" href="#">Dashboard</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Journeys</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">AI Hub</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Settings</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/50" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIYQ0TVYJ9dFAODlRftdjtOPi9pw5H7S4Poetum-MSZmqw-pvMGJ0Ob07bGuX3VLZDUGMmmFuzfGyikiaEXrdacnjrDvzCK2ktuFHSFX2zo0moCREGrNsSWDFjrVNEC9Y5Y8Re5ohgkfyUOa3nSlCKG65zIDTiPsNTdsUrwl2TBa-aMgmHhcUdMd46rsftlmgxsZUWwBXLwc03JeFW_UFRDgkXPMw75PV07pJ8_u7CXRzQLHfoKqz_0erAKp9fQVfH0O3ZrKX8WyQ");'></div>
+</div>
+</header>
+<!-- Welcome Banner -->
+<div class="flex p-4 @container mb-4">
+<div class="glass-panel w-full rounded-2xl p-8 mesh-bg relative overflow-hidden flex flex-col @[520px]:flex-row @[520px]:justify-between @[520px]:items-center neon-glow">
+<div class="flex gap-6 items-center z-10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24 ring-4 ring-primary/30" data-alt="Operator profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2iaJAPEI3AKKi0Uy5UsByYMumaTTC9FQARsJvNYz3CsEMm0VGBJMku6ZltSaOa1V4IhPyyJJErrynKxq1MS-k3E8zDmBP7pyED9WnCAG5DgLrbGncxy-HMBPvWz3kUHzL-tb6TDnfkWp3IprZsjumYTox5n8xDjGmKc_AF9O0FYnKWkTxbKL9a06Jwl2ookrEjZldMEOa0XyDxnKG2eUKEG9FZPrwbEEM93-bJthmkKZQzwV0SOeV2tHTcRYBFp15qKdr4EQdG3U");'></div>
+<div class="flex flex-col justify-center gap-1">
+<p class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">Welcome back, Operator Aryan</p>
+<div class="flex items-center gap-2 mt-1 bg-black/30 w-fit px-3 py-1.5 rounded-full border border-primary/20">
+<span class="size-2.5 rounded-full bg-primary shadow-[0_0_8px_#06e8f9]"></span>
+<p class="text-primary text-sm font-medium leading-normal uppercase tracking-wider">Neural Sync Status: Optimal</p>
+</div>
+</div>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-[#b400ff]/10 to-transparent opacity-50 z-0"></div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-6 p-4">
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Quick Start Panel -->
+<div class="glass-panel rounded-2xl p-10 flex flex-col justify-center items-center gap-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+<div class="flex flex-col gap-3 text-center z-10">
+<h1 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight md:text-4xl md:font-black md:tracking-tight max-w-[720px]">
+                    What do you want to master today?
+                  </h1>
+</div>
+<div class="flex w-full justify-center z-10">
+<div class="flex flex-col w-full max-w-[600px] h-16 neon-border rounded-xl transition-all duration-300 border border-primary/30 bg-black/40">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-xl text-slate-900 dark:text-white focus:outline-none focus:ring-0 border-none bg-transparent h-full placeholder:text-slate-500 px-6 text-base font-medium" placeholder="e.g., Advanced Neural Networks, String Theory..." value=""/>
+<div class="flex items-center justify-center rounded-r-xl bg-transparent pr-2 pl-2">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-gradient-to-r from-[#b400ff] to-primary text-slate-900 hover:text-white hover:shadow-[0_0_20px_rgba(6,232,249,0.5)] transition-all duration-300 text-sm font-bold uppercase tracking-wider">
+<span class="truncate">Generate Path</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Current Journey -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col gap-6">
+<div class="flex justify-between items-center border-b border-primary/20 pb-4">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">route</span>
+                    Current Journey: <span class="gradient-text ml-1">Quantum Physics</span>
+</h2>
+<span class="text-xs font-mono text-primary/70 border border-primary/30 px-2 py-1 rounded bg-primary/10">SECTOR_4_ACTIVE</span>
+</div>
+<div class="flex flex-col gap-4 relative before:absolute before:inset-y-0 before:left-6 before:w-[2px] before:bg-primary/20 before:z-0">
+<!-- Completed Module -->
+<div class="flex items-center gap-6 relative z-10 group">
+<div class="size-12 rounded-full bg-[#0a1516] border border-[#22c55e] shadow-[0_0_10px_rgba(34,197,94,0.3)] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#22c55e]">check_circle</span>
+</div>
+<div class="glass-panel p-4 rounded-xl flex-1 border-[#22c55e]/30 group-hover:border-[#22c55e]/50 transition-colors">
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Module 1</p>
+<p class="text-white text-lg font-medium">Wave-Particle Duality</p>
+</div>
+</div>
+<!-- Completed Module -->
+<div class="flex items-center gap-6 relative z-10 group">
+<div class="size-12 rounded-full bg-[#0a1516] border border-[#22c55e] shadow-[0_0_10px_rgba(34,197,94,0.3)] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#22c55e]">check_circle</span>
+</div>
+<div class="glass-panel p-4 rounded-xl flex-1 border-[#22c55e]/30 group-hover:border-[#22c55e]/50 transition-colors">
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Module 2</p>
+<p class="text-white text-lg font-medium">Schrödinger Equation Basics</p>
+</div>
+</div>
+<!-- Active Module -->
+<div class="flex items-center gap-6 relative z-10 group mt-2">
+<div class="size-12 rounded-full bg-[#0a1516] border-2 border-primary shadow-[0_0_15px_rgba(6,232,249,0.5)] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary animate-pulse">model_training</span>
+</div>
+<div class="glass-panel p-5 rounded-xl flex-1 border-primary/50 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Module 3 • In Progress</p>
+<p class="text-white text-lg font-bold">Quantum Entanglement</p>
+</div>
+<span class="text-sm font-mono text-slate-300">45%</span>
+</div>
+<div class="w-full bg-black/50 h-2 rounded-full mt-3 overflow-hidden border border-primary/20">
+<div class="bg-gradient-to-r from-primary/50 to-primary h-full rounded-full w-[45%] shadow-[0_0_10px_#06e8f9]"></div>
+</div>
+</div>
+</div>
+<!-- Locked Module -->
+<div class="flex items-center gap-6 relative z-10 opacity-60 mt-2">
+<div class="size-12 rounded-full bg-black/40 border border-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500">lock</span>
+</div>
+<div class="glass-panel p-4 rounded-xl flex-1 border-slate-700/50 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.02)_10px,rgba(255,255,255,0.02)_20px)]">
+<p class="text-slate-500 text-xs font-bold uppercase tracking-wider mb-1">Module 4 • Locked Sector</p>
+<p class="text-slate-400 text-lg font-medium">Quantum Computing Applications</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Sidebar -->
+<div class="w-full lg:w-72 flex flex-col gap-4">
+<div class="glass-panel flex flex-col gap-3 rounded-2xl p-6 border-primary/30 relative overflow-hidden group hover:border-primary/60 transition-colors">
+<div class="absolute -right-4 -top-4 size-24 bg-[#ff6b00]/10 rounded-full blur-xl group-hover:bg-[#ff6b00]/20 transition-all"></div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-[#ff6b00]/10 flex items-center justify-center border border-[#ff6b00]/30 shadow-[0_0_10px_rgba(255,107,0,0.2)]">
+<span class="material-symbols-outlined text-[#ff6b00]">local_fire_department</span>
+</div>
+<p class="text-slate-300 text-sm font-medium uppercase tracking-wide">Current Streak</p>
+</div>
+<p class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight mt-2">12 <span class="text-xl font-medium text-slate-400">Days</span></p>
+</div>
+<div class="glass-panel flex flex-col gap-3 rounded-2xl p-6 border-primary/30 relative overflow-hidden group hover:border-primary/60 transition-colors">
+<div class="absolute -right-4 -top-4 size-24 bg-[#ffd700]/10 rounded-full blur-xl group-hover:bg-[#ffd700]/20 transition-all"></div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-[#ffd700]/10 flex items-center justify-center border border-[#ffd700]/30 shadow-[0_0_10px_rgba(255,215,0,0.2)]">
+<span class="material-symbols-outlined text-[#ffd700]">military_tech</span>
+</div>
+<p class="text-slate-300 text-sm font-medium uppercase tracking-wide">Modules Done</p>
+</div>
+<p class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight mt-2">4</p>
+</div>
+<div class="glass-panel rounded-2xl p-6 border-primary/20 flex flex-col gap-4 mt-auto">
+<h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">memory</span> System Load
+                 </h3>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs text-slate-400 font-mono">
+<span>NEURAL_CAPACITY</span>
+<span class="text-primary">78%</span>
+</div>
+<div class="w-full bg-black/50 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

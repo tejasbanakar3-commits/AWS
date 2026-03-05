@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vidya-Setu Elite Learning Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#00eeff",
+          "accent": "#b400ff",
+          "success": "#0bda50",
+          "background-light": "#f5f8f8",
+          "background-dark": "#0a0f16", 
+          "panel": "rgba(15, 23, 42, 0.6)",
+          "panel-border": "rgba(255, 255, 255, 0.08)",
+        },
+        fontFamily: {
+          "display": ["Space Grotesk", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+        boxShadow: {
+          'neon': '0 0 15px rgba(0, 238, 255, 0.3)',
+          'neon-accent': '0 0 15px rgba(180, 0, 255, 0.3)',
+        }
+      },
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #0a0f16;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(0, 238, 255, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(180, 0, 255, 0.03) 0%, transparent 50%);
+  }
+  .glass-panel {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 238, 255, 0.4);
+  }
+</style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-panel-border glass-panel px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shadow-neon">
+<span class="material-symbols-outlined text-primary text-xl">school</span>
+</div>
+<h2 class="text-slate-100 text-xl font-bold leading-tight tracking-tight text-glow">Vidya-Setu</h2>
+</div>
+<div class="flex items-center gap-8 ml-8 hidden md:flex">
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Dashboard</a>
+<a class="text-primary text-sm font-medium border-b-2 border-primary pb-1" href="#">Analytics</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Learning Paths</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Settings</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<div class="relative hidden sm:block max-w-md w-full">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-lg">search</span>
+</div>
+<input class="block w-full p-2 pl-10 text-sm text-slate-200 bg-slate-800/50 border border-panel-border rounded-lg focus:ring-primary/50 focus:border-primary/50 placeholder-slate-500 transition-all" placeholder="Search knowledge base..." type="text"/>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 size-2 bg-accent rounded-full animate-pulse"></span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-primary/30" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCY5Yrof7m3mrRCw4TgTNQEICXZYnyyeDElu0ryXSrSYQzF41BgqSqNJvvpVIVMSlr5aMVpJoRDHulKfuo7xHryu2KAN27s9eY4cTi0hkmHr6mX04SPOszA_IBXRwfCvq4AbJ29hH5fQ84Dx_KwuJ4IEp8GOR9YpukWF_DbLi9GSll_SkcXGMhWYJl4_6Se3yX48w7hf4WEvOQ6CxIVz-M2Bk0P1bnCubEw4sM6QqMmfAkyHmVb9BpfS4Ft2W-07MVPamBQEt-OZu4");'></div>
+</div>
+</header>
+<main class="layout-container flex h-full grow flex-col px-6 md:px-10 lg:px-20 py-8 max-w-[1600px] mx-auto w-full">
+<!-- Header Section -->
+<div class="flex flex-col gap-2 mb-8">
+<h1 class="text-slate-100 text-4xl md:text-5xl font-bold leading-tight tracking-tight">Your Learning Analytics</h1>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-sm">memory</span>
+<p class="text-slate-400 text-sm md:text-base font-medium">Performance insights powered by Neural Engine v4.2</p>
+</div>
+</div>
+<!-- Quick Stats Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+<!-- Stat 1 -->
+<div class="glass-panel rounded-xl p-6 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
+<div class="absolute -right-6 -top-6 size-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<div class="flex justify-between items-start mb-4">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Time Invested</p>
+<span class="material-symbols-outlined text-primary drop-shadow-[0_0_8px_rgba(0,238,255,0.5)]">schedule</span>
+</div>
+<p class="text-slate-100 text-3xl font-bold mb-2">24h 42m</p>
+<div class="flex items-center gap-1 text-success text-sm font-medium">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span>12% this week</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="glass-panel rounded-xl p-6 relative overflow-hidden group hover:border-accent/30 transition-all duration-300">
+<div class="absolute -right-6 -top-6 size-24 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-all"></div>
+<div class="flex justify-between items-start mb-4">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Average Accuracy</p>
+<span class="material-symbols-outlined text-accent drop-shadow-[0_0_8px_rgba(180,0,255,0.5)]">target</span>
+</div>
+<p class="text-slate-100 text-3xl font-bold mb-2">92.4%</p>
+<div class="flex items-center gap-1 text-success text-sm font-medium">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span>4.1% this week</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="glass-panel rounded-xl p-6 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
+<div class="absolute -right-6 -top-6 size-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<div class="flex justify-between items-start mb-4">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Modules Mastered</p>
+<span class="material-symbols-outlined text-primary drop-shadow-[0_0_8px_rgba(0,238,255,0.5)]">workspace_premium</span>
+</div>
+<p class="text-slate-100 text-3xl font-bold mb-2">18</p>
+<div class="flex items-center gap-1 text-success text-sm font-medium">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span>2 this week</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="glass-panel rounded-xl p-6 relative overflow-hidden group hover:border-accent/30 transition-all duration-300">
+<div class="absolute -right-6 -top-6 size-24 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-all"></div>
+<div class="flex justify-between items-start mb-4">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Daily Streak</p>
+<span class="material-symbols-outlined text-accent drop-shadow-[0_0_8px_rgba(180,0,255,0.5)]">local_fire_department</span>
+</div>
+<p class="text-slate-100 text-3xl font-bold mb-2">12 Days</p>
+<div class="flex items-center gap-1 text-success text-sm font-medium">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span>1 Day</span>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+<!-- Left Column -->
+<div class="lg:col-span-2 flex flex-col gap-6 md:gap-8">
+<!-- Subject Time Distribution -->
+<div class="glass-panel rounded-2xl p-6 md:p-8">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-slate-100 text-xl font-bold tracking-tight">Subject Time Distribution</h2>
+<button class="text-slate-400 hover:text-primary transition-colors text-sm flex items-center gap-1">
+                View All <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Subject 1 -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<p class="text-slate-200 font-medium">Advanced Physics</p>
+<p class="text-primary font-mono text-sm">45%</p>
+</div>
+<div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary shadow-[0_0_10px_rgba(0,238,255,0.8)]" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Subject 2 -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<p class="text-slate-200 font-medium">Multivariable Calculus</p>
+<p class="text-accent font-mono text-sm">30%</p>
+</div>
+<div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-accent shadow-[0_0_10px_rgba(180,0,255,0.8)]" style="width: 30%;"></div>
+</div>
+</div>
+<!-- Subject 3 -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<p class="text-slate-200 font-medium">Computer Science</p>
+<p class="text-[#00ff88] font-mono text-sm">15%</p>
+</div>
+<div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-[#00ff88] shadow-[0_0_10px_rgba(0,255,136,0.8)]" style="width: 15%;"></div>
+</div>
+</div>
+<!-- Subject 4 -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<p class="text-slate-200 font-medium">Organic Chemistry</p>
+<p class="text-[#ff9900] font-mono text-sm">10%</p>
+</div>
+<div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-[#ff9900] shadow-[0_0_10px_rgba(255,153,0,0.8)]" style="width: 10%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Cognitive Analysis -->
+<div class="glass-panel rounded-2xl p-6 md:p-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h2 class="text-slate-100 text-xl font-bold tracking-tight">AI Cognitive Analysis</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Strong Points -->
+<div class="bg-slate-800/40 rounded-xl p-5 border border-primary/20">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-success text-sm">add_circle</span>
+<h3 class="text-slate-200 font-semibold uppercase text-xs tracking-widest">Strong Points</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<div class="size-1.5 rounded-full bg-primary mt-2"></div>
+<div>
+<p class="text-slate-200 text-sm font-medium">Logical Reasoning</p>
+<p class="text-slate-400 text-xs mt-0.5">Top 5% among peers in deductive problem solving.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="size-1.5 rounded-full bg-primary mt-2"></div>
+<div>
+<p class="text-slate-200 text-sm font-medium">Pattern Recognition</p>
+<p class="text-slate-400 text-xs mt-0.5">Exceptional speed in algorithmic visual tasks.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Areas for Growth -->
+<div class="bg-slate-800/40 rounded-xl p-5 border border-accent/20">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#ff4444] text-sm">remove_circle</span>
+<h3 class="text-slate-200 font-semibold uppercase text-xs tracking-widest">Areas for Growth</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<div class="size-1.5 rounded-full bg-accent mt-2"></div>
+<div>
+<p class="text-slate-200 text-sm font-medium">Conceptual Depth</p>
+<p class="text-slate-400 text-xs mt-0.5">Struggles with theoretical derivations in Physics.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="size-1.5 rounded-full bg-accent mt-2"></div>
+<div>
+<p class="text-slate-200 text-sm font-medium">Time Management</p>
+<p class="text-slate-400 text-xs mt-0.5">Tends to over-allocate time on complex single questions.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column -->
+<div class="lg:col-span-1 h-full">
+<!-- AI Improvement Plan -->
+<div class="glass-panel rounded-2xl p-6 md:p-8 flex flex-col h-full border-primary/20 relative overflow-hidden">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary animate-pulse">auto_awesome</span>
+<h2 class="text-slate-100 text-xl font-bold tracking-tight text-glow">AI Improvement Plan</h2>
+</div>
+<p class="text-slate-400 text-sm mb-8">Neural network generated steps to optimize your learning curve today.</p>
+<div class="flex-1 flex flex-col gap-5">
+<!-- Step 1 -->
+<div class="flex gap-4 group">
+<div class="flex flex-col items-center">
+<div class="size-8 rounded-full bg-primary/20 border border-primary/50 flex items-center justify-center text-primary font-bold text-sm shadow-neon z-10 group-hover:bg-primary group-hover:text-slate-900 transition-colors">1</div>
+<div class="w-px h-full bg-slate-700 mt-2"></div>
+</div>
+<div class="pb-6">
+<h4 class="text-slate-200 font-medium mb-1">Revisit Quantum Entanglement Quiz</h4>
+<p class="text-slate-400 text-xs">Your accuracy was 65%. A quick review of Bell's Theorem is recommended.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-4 group">
+<div class="flex flex-col items-center">
+<div class="size-8 rounded-full bg-accent/20 border border-accent/50 flex items-center justify-center text-accent font-bold text-sm shadow-neon-accent z-10 group-hover:bg-accent group-hover:text-slate-900 transition-colors">2</div>
+<div class="w-px h-full bg-slate-700 mt-2"></div>
+</div>
+<div class="pb-6">
+<h4 class="text-slate-200 font-medium mb-1">Practice Calculus Integrations</h4>
+<p class="text-slate-400 text-xs">Complete the 'Integration by Parts' micro-module to strengthen foundation.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-4 group">
+<div class="flex flex-col items-center">
+<div class="size-8 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-slate-400 font-bold text-sm z-10 group-hover:border-primary/50 group-hover:text-primary transition-colors">3</div>
+</div>
+<div>
+<h4 class="text-slate-200 font-medium mb-1">Read: Cognitive Load Theory</h4>
+<p class="text-slate-400 text-xs">A suggested 5-min read to improve your study session efficiency.</p>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white font-bold text-sm tracking-wide uppercase transition-all shadow-[0_0_20px_rgba(0,238,255,0.4)] hover:shadow-[0_0_30px_rgba(180,0,255,0.6)] border border-white/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">rocket_launch</span>
+                Activate Learning Path
+              </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
